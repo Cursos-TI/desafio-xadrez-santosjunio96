@@ -1,32 +1,106 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+int main(){
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+printf("----------Movimento Torre----------\n");
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    int torre = 1;
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+while (torre <= 5)
+{
+    printf("A torre foi movida para casa A %d \n", torre);
+    torre ++;
+}
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+printf("----------Movimento Bispo----------\n");
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    int bispo = 1;
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+do
+{
+    switch (bispo)
+    {
+    case 1:
+        printf("O bispo foi movido para casa C %d \n",bispo);
+        break;
+    case 2:
+        printf("O bispo foi movido para casa D %d \n",bispo);
+        break;
+    case 3:
+        printf("O bispo foi movido para casa E %d \n",bispo);
+        break;
+    case 4:
+        printf("O bispo foi movido para casa F %d \n",bispo);
+        break;
+    case 5:
+        printf("O bispo foi movido para casa G %d \n",bispo);
+        break;
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
 
-    return 0;
+    default:
+        break;
+    }
+    bispo ++;
+    
+} while (bispo <= 5);
+
+printf("----------Movimento Rainha----------\n");
+
+
+
+
+for (int Rainha = 1; Rainha <= 8; Rainha++)
+{
+
+    switch (Rainha)
+    {
+    case 1:
+        printf("A Rainha foi movida para casa H 4 \n");
+        break;
+    case 2:
+        printf("A Rainha foi movida para casa G 4 \n");
+        break;
+    case 3:
+        printf("A Rainha foi movida para casa F 4 \n");
+        break;
+    case 4:
+        printf("A Rainha foi movida para casa E 4 \n");
+        break;        
+    case 5:
+        printf("A Rainha foi movida para casa D 4 \n");
+        break;        
+    case 6:
+        printf("A Rainha foi movida para casa C 4 \n");
+        break;
+    case 7:
+        printf("A Rainha foi movida para casa B 4 \n");
+        break;
+    case 8:
+        printf("A Rainha foi movida para casa A 4 \n");
+        break;
+
+    default:
+        break;
+    }
+
+   
+}
+
+ printf(" Xeque Mate!!");
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
 }
