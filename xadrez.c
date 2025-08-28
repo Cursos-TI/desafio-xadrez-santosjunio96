@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main(){
-
+printf("\n");
 printf("----------Movimento Torre----------\n");
-
+printf("\n");
     int torre = 1;
 
 while (torre <= 5)
@@ -11,9 +11,9 @@ while (torre <= 5)
     printf("A torre foi movida para casa A %d \n", torre);
     torre ++;
 }
-
+printf("\n");
 printf("----------Movimento Bispo----------\n");
-
+printf("\n");
     int bispo = 1;
 
 do
@@ -36,7 +36,6 @@ do
         printf("O bispo foi movido para casa G %d \n",bispo);
         break;
 
-
     default:
         break;
     }
@@ -44,11 +43,9 @@ do
     
 } while (bispo <= 5);
 
+printf("\n");
 printf("----------Movimento Rainha----------\n");
-
-
-
-
+printf("\n");
 for (int Rainha = 1; Rainha <= 8; Rainha++)
 {
 
@@ -81,16 +78,20 @@ for (int Rainha = 1; Rainha <= 8; Rainha++)
 
     default:
         break;
+    }   
+}
+printf("\n");
+printf("----------Movimento Cavalo----------\n");
+printf("\n");
+for (int Cavalo = 3; Cavalo <= 3; Cavalo++){
+    for (int Cavalo2 = 5; Cavalo2 >= 3; Cavalo2--){
+        printf("O Cavalo foi movido para casa E %d \n",Cavalo2);
+    }
+        printf("O Cavalo foi movido para casa D %d \n", Cavalo);
     }
 
-   
-}
-
- printf(" Xeque Mate!!");
-    
-    
-
-
+printf("\n");
+printf(" Xeque Mate!!");
 
 
 
