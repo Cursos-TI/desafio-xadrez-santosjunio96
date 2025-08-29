@@ -1,19 +1,108 @@
 #include <stdio.h>
 
+
+
+void recursiveTorre(int t){ 
+
+    if (t > 0){
+        recursiveTorre(t - 1);
+        printf("A torre foi movida para casa A %d \n",t);  
+    }
+}
+
+void recursiveBispo(int b){ 
+    if (b > 0){
+        recursiveBispo(b - 1);
+
+        switch (b)
+    {
+    case 1:
+        printf("O bispo foi movido para casa C %d \n",b);
+        break;
+    case 2:
+        printf("O bispo foi movido para casa D %d \n",b);
+        break;
+    case 3:
+        printf("O bispo foi movido para casa E %d \n",b);
+        break;
+    case 4:
+        printf("O bispo foi movido para casa F %d \n",b);
+        break;
+    case 5:
+        printf("O bispo foi movido para casa G %d \n",b);
+        break;
+
+    default:
+        break;
+    }
+    }
+}
+
+void recursiveRainha(char r){
+    if (r >= 'A'){
+        printf("A Rainha foi movida para casa %c 4 \n",r);
+        recursiveRainha(r - 1);
+        
+    }
+}
+
+void recursiveCavalo(int c){
+    if (c > 2){
+        printf("O Cavalo foi movido para casa E %d \n", c);
+        recursiveCavalo(c - 1);
+        if (c <= 3 ){
+            printf("O Cavalo foi movido para casa D 3 \n");
+        }
+    }
+
+}
+
+
+
+
+
 int main(){
+
+int Xadrez = 5;
+char XadrezR = 'H';
 printf("\n");
 printf("----------Movimento Torre----------\n");
 printf("\n");
-    int torre = 1;
+recursiveTorre(Xadrez);
+printf("\n");
+printf("----------Movimento Bispo----------\n");
+printf("\n");
+recursiveBispo(Xadrez);
+printf("\n");
+printf("----------Movimento Rainha----------\n");
+printf("\n");
+recursiveRainha(XadrezR);
+printf("\n");
+printf("----------Movimento Cavalo----------\n");
+printf("\n");
+recursiveCavalo(Xadrez);
 
+
+
+
+
+/*
+printf("\n");
+printf("----------Movimento Torre----------\n");
+printf("\n");
+
+ int torre = 1;
 while (torre <= 5)
 {
     printf("A torre foi movida para casa A %d \n", torre);
     torre ++;
 }
-printf("\n");
+printf("\n"); */
+
+/*
 printf("----------Movimento Bispo----------\n");
 printf("\n");
+
     int bispo = 1;
 
 do
@@ -42,6 +131,7 @@ do
     bispo ++;
     
 } while (bispo <= 5);
+ 
 
 printf("\n");
 printf("----------Movimento Rainha----------\n");
@@ -80,6 +170,7 @@ for (int Rainha = 1; Rainha <= 8; Rainha++)
         break;
     }   
 }
+
 printf("\n");
 printf("----------Movimento Cavalo----------\n");
 printf("\n");
@@ -93,12 +184,7 @@ for (int Cavalo = 3; Cavalo <= 3; Cavalo++){
 printf("\n");
 printf(" Xeque Mate!!");
 
-
-
-
-
-
-
+*/
 
 
 
